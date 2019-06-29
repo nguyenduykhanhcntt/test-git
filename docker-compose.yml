@@ -1,0 +1,21 @@
+version: '3'
+services:
+  #  mysql.local:
+  #    image: mysql:5.6
+  #    ports:
+  #    - 10081:3306
+  #    environment:
+  #    - MYSQL_ROOT_PASSWORD=51500e85b7dcbe6029ca77f788364a67
+  #    volumes:
+  #    - ./docker/mysql:/var/lib/mysql
+
+  back-end.local:
+    build: .
+    volumes:
+    - ./src:/var/www/html
+    - ./docker/logs:/var/log/apache2
+    - ./docker/hosts:/etc/apache2/sites-enabled
+    ports:
+    - 80:80
+#    links:
+#    - mysql.local
