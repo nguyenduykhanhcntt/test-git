@@ -1,2 +1,3 @@
-nhanh moi 
-2/7 .....oke oke
+
+oke oek chawck oke them nua
+
